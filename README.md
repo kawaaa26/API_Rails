@@ -119,17 +119,15 @@ Create a Rails Application in quite simple way.
   Add the below to `config/application.rb`
 
   ```ruby
-      config.middleware.insert_before 0, Rack::Cors do
-        allow do
-          origins 'http://localhost:3000'
-          resource '*',
-          :headers => :any,
-          :methods => %i(get post patch delete options)
-        end
-      end
+  config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins 'http://localhost:3000'
+      resource '*',
+      :headers => :any,
+      :methods => %i(get post patch delete options)
     end
   end
-  ```
+   ```
 
 The application is ready.
 
